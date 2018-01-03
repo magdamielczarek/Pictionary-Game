@@ -1,0 +1,158 @@
+/*******************************************
+		ANIMATIONS
+*******************************************/
+
+@keyframes draw_line {
+	100% {
+		stroke-dasharray: 3000; 
+		stroke-dashoffset: 0; 
+		fill: #383838;
+	}
+}
+
+@keyframes scores {
+	50% {
+		transform: scale(2);
+	}
+	100% {
+		transform: rotate(360deg); 
+		transform: scale(1);
+	}
+}
+
+/*******************************************
+		PAGE
+*******************************************/
+
+.game-board {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: $beige;
+}
+
+.game-state {
+	background: url('../images/watercolor-stroke-red-2-15.png') no-repeat;
+	background-size: 100% 100%;
+	background-position: 50% 50%;
+	ul {
+		margin: 0;
+		padding: 4px 20px;
+		display: flex;
+		flex: 1 1;
+		justify-content: space-between;
+		align-items: center;
+		list-style-type: none;
+	}
+	li {
+		padding: 5px;
+		display: flex;
+		align-items: center;
+		font-size: 30px;
+		color: $beige;
+		&:last-of-type {
+			cursor: pointer;
+		}
+	}
+	li>span {
+		margin-right: 20px;
+	}
+	.flaticon-time-left:before,
+	.flaticon-favorites:before,
+	.flaticon-right-arrow:before,
+	.flaticon-list:before {
+		font-size: 32px;
+		margin-left: 0;
+		color: $beige;
+	}
+}
+
+.pict {
+	width: 100%;
+	height: 500px;
+	text-align: center;
+	position: relative;
+	img {
+		height:300px;
+	}
+}
+
+.answear {
+	width: 70%;
+	height: 100px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: url('../images/watercolor-stroke-blue-2-21.png') no-repeat;
+	background-size: 100% 100%;
+	background-position: 50%;
+	input,
+	button {
+		height: 50%;
+		padding: 0 15px;
+		font-size: 24px;
+		border: none;
+		border-radius: 10px; 
+	}
+	input {
+		width: 50%;
+		margin: 0 2%;
+		background-color: $beige;
+	}
+	button {
+		width: 25%;
+		background-color: $grey;
+		color: $beige;
+		cursor: pointer;
+		text-transform: uppercase;
+		&:hover,
+		&:active {
+			background-color: $magenta;
+		}
+	}
+	span {
+		font-size: 24px;
+	}
+}
+
+ .next {
+ 	cursor: pointer;
+ }
+
+ path {
+ 	stroke: #383838;
+	stroke-width: 2px;
+	stroke-dasharray: 3000;
+	stroke-dashoffset: 3000;
+ }
+
+
+/* DRAWING LINES */
+
+.animate {
+ 	animation: draw_line 3s forwards;
+ }
+
+
+/* CHECKING USER'S ANSWEARS */
+
+.wrong {
+ 	background: url('../images/watercolor-stroke-red-2-15.png') no-repeat;
+ 	background-size: 100% 100%;
+	background-position: 50%;
+ }
+
+.correct {
+ 	background: url('../images/watercolor-stroke-green-2-3.png') no-repeat;
+ 	background-size: 100% 100%;
+	background-position: 50%;
+ }
+
+
+/* ADDING SCORES ANIMATION */
+
+.star_animate {
+ 	animation: scores 1s forwards;
+ }

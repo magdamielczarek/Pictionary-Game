@@ -1,0 +1,54 @@
+
+@media screen and (max-width: 800px) {
+	
+	.rules {
+		header {
+			width: 100%;
+		}
+	}
+
+	.game-state {
+		ul {
+			padding: 10px;
+		}
+		li {
+			font-size: 20px;
+		}
+		li>span {
+			margin-right: 10px;
+		}
+		.flaticon-time-left:before,
+		.flaticon-favorites:before,
+		.flaticon-right-arrow:before,
+		.flaticon-list:before {
+			font-size: 20px;
+		}
+	}
+
+	.answear {
+		width: 90%;
+		input,
+		button {
+			height: 50%;
+			padding: 0 5px;
+			font-size: 18px; 
+		}
+		input {
+			width: 50%;
+			margin: 0 2%;
+		}
+		button {
+			width: 25%;
+		}
+		span {
+			font-size: 18px;
+		}
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	.layout-container {
+		width: 95%;
+	}
+}

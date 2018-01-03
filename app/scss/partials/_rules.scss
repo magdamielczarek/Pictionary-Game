@@ -1,0 +1,122 @@
+
+.rules {
+	position: relative;
+	padding: 10px;
+	header {
+		width: 50%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.previous-page {
+		width: 60px;
+		height: 60px;
+		flex: 1 1;
+		background: url('../images/icons/024-left-arrow.svg') no-repeat;
+		background-size: contain;
+		background-position: center center;
+		border: none;
+		cursor: pointer;
+	}
+	h2 { 
+		height: 70px;
+		margin: 20px auto;
+		flex: 5 5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
+		font-size: 25px;
+		color: #FFF;
+		text-transform: uppercase;
+		text-align: center;
+		background: url('../images/watercolor-stroke-blue-2-21.png') no-repeat;
+		background-position: 50% 50%;
+		background-size: 100% 100%;
+	}
+	.slider {
+		width: 95%;
+		height: 50vh;
+		margin: 0 auto;
+		position: relative;
+		border: 5px solid $grey;
+		border-radius: 10px;
+		overflow: hidden;
+		.slide {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-color: #FFF;
+			top: 0;
+			left: 0;
+			&:first-of-type {
+				z-index: 6;
+			}
+			&:nth-of-type(2) {
+				z-index: 5;
+			}
+			&:nth-of-type(3) {
+				z-index: 4;
+			}
+			&:nth-of-type(4) {
+				z-index: 3;
+			}
+			&:last-of-type {
+				z-index: 2;
+			}
+		}
+
+		figure {
+			height: 100%;
+			margin: 0;
+			padding: 10px;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			box-sizing: border-box;
+		}
+
+		img {
+			max-height: 70%;
+			width: auto; 
+		}
+
+		figcaption {
+			margin-top: 20px;
+			font-size: 20px;
+		}
+	}
+
+	.buttons {
+		text-align: center;
+	}
+
+	.slider-nav {
+		margin: 30px 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.slider-button {
+		width: 30px;
+		height: 30px;
+		margin: 2%;
+		font-size: 20px;
+		color: $beige;
+		text-align: center;
+		line-height: 30px;
+		border-radius: 50%;
+		background-color: $grey;
+		cursor: pointer;
+		&:hover {
+			background-color: $magenta;
+		}
+	}
+
+	.show-button {
+		background-color: $magenta !important;
+	}
+}

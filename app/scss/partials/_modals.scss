@@ -1,0 +1,80 @@
+
+/* MODALS */
+
+.modal,
+.submit-scores {
+ 	width: 100%;
+ 	height: 100%;
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	background-color: rgba(#000,0.4);
+ 	display: none;
+ 	div {
+ 		width: 300px;
+ 		padding: 20px;
+ 		text-align: center;
+ 		border-radius: 10px;
+ 		background-color: $beige;
+ 	}
+ 	p {
+ 		padding: 20px 30px;
+ 	}
+ 	button {
+ 		width: 70px;
+ 		height: 70px;
+ 		color: $beige;
+ 		border: none;
+ 		cursor: pointer;
+ 		&:first-of-type {
+ 			background: url('../images/watercolor-circle-2-6.png') no-repeat;
+ 			background-position: 50% 50%;
+ 			background-size: 95%;
+ 		}
+ 		&:last-of-type {
+ 			background: url('../images/watercolor-circle-2-12.png') no-repeat;
+ 			background-position: 50% 50%;
+ 			background-size: 95%;
+ 		}
+ 	}
+ 	a {
+ 		text-decoration: none;
+ 		color: $beige;
+ 	}
+ 	form {
+ 		margin: 20px 0;
+ 		display: none;
+ 		fieldset {
+ 			padding: 10px;
+ 			border-radius: 10px;
+ 		}
+ 		label {
+ 			display: block;
+ 			margin-bottom: 20px;
+ 		}
+ 		input[type="text"] {
+ 			width: 60%;
+ 			padding: 5px;
+ 			border: 2px solid $magenta;
+ 			border-radius: 5px;
+ 		}
+ 		input[type="submit"] {
+ 			padding: 5px;
+ 			background-color: $magenta;
+ 			color: $beige;
+ 			border: none;
+ 			border-radius: 5px;
+ 		}
+ 	}
+ }
+
+.modal-show {
+ 	display: flex;
+ }
+
+.modal-hide {
+ 	display: none;
+ }
